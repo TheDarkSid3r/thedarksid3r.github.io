@@ -1,72 +1,51 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 body {
     margin: 0;
-    background-color: #300b3b;
-    font-family: "Inter", sans-serif;
+    background-color: #efe6ff;
 }
 
-* {
-    box-sizing: border-box;
-    line-height: 115%;
+body, html {
+    height: 100vh;
 }
 
-.main-header {
-    background-color: #721e8a;
-    color: #fff;
-    padding: 20px 0;
-    font-size: 48px;
-    font-weight: 900;
-    text-align: center;
-    position: fixed;
+.image {
+    position: absolute;
+    top: 50%;
     left: 0;
+    width: 100%;
+    max-height: 100%;
+    transform: translateY(-50%);
+    box-sizing: border-box;
+}
+
+.image>div {
+    position: relative;
     top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-@media only screen and (max-width: 400px) {
-    .main-header {
-        font-size: 12vw;
-    }
+.image.image-1 {
+    height: 400px;
+    padding: 40px;
+    z-index: 3;
 }
 
-.content {
-    width: 800px;
-    max-width: 100%;
-    display: block;
-    margin: 95px auto 0;
-    padding: 20px 20px 60px;
+.image.image-1>div {
+    background-image: url(drawing.svg);
+    background-size: contain;
 }
 
-.title {
-    color: #e899ff;
-    font-weight: 700;
-    font-size: 32px;
-    padding: 30px 0 5px;
-    width: 100%;
-    text-align: left;
+.image.image-2 {
+    height: 500px;
+    padding: 0;
+    z-index: 2;
 }
 
-.body {
-    color: #e899ff;
-    font-weight: 400;
-    font-size: 16px;
-    width: 100%;
-    text-align: left;
-}
-
-a {
-    color: #fff;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-.footer {
-    color: #fff;
-    font-size: 18px;
-    margin-top: 60px;
-    text-align: left;
-    font-weight: 200;
+.image.image-2>div {
+    background-image: url(drawing2.svg);
+    background-size: contain;
+    opacity: 0.3;
 }
