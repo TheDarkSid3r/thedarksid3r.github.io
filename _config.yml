@@ -28,7 +28,7 @@ twitter_username: Sid3rDark
 github_username:  TheDarkSid3r
 
 # Build settings
-theme: jekyll-theme-midnight
+theme: midnight
 plugins:
   - jekyll-feed
 
